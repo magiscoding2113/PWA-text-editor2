@@ -1,28 +1,28 @@
 import { openDB } from 'idb';
 
 const initdb = async () =>
-  openDB('textEditor', 1, {
+  openDB('jate', 1, {
     upgrade(db) {
-      if (db.objectStoreNames.contains('textEditor')) {
-        console.log('textEditor database already exists');
+      if (db.objectStoreNames.contains('jate')) {
+        console.log('jate database already exists');
         return;
       }
-      db.createObjectStore('textEditor', { keyPath: 'id', autoIncrement: true });
-      console.log('textEditor database created');
+      db.createObjectStore('jate', { keyPath: 'id', autoIncrement: true });
+      console.log('jate database created');
     },
   });
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {
-  console.log('putDb not implemented');
 
-  const textDb = await openDB('textEditor', 1);
 
-  const tx = textDb.transaction('textEditor', 'readwrite');
+  const textDb = await openDB('jate', 1);
 
-  const store = tx.objectStore('textEditor');
+  const tx = textDb.transaction('jate', 'readwrite');
 
-  const request = store.put({ id:1,  content});
+  const store = tx.objectStore('jate');
+
+  const request = store.put({ content, id: 1});
 
   const result = await request;
   console.log('data saved to database', result);
@@ -34,13 +34,13 @@ console.log('getDb not implemented');
 
 
 // Create a connection to the database database and version we want to use.
-const textDb = await openDB('textEditor', 1);
+const textDb = await openDB('jate', 1);
 
 // Create a new transaction and specify the database and data privileges.
-const tx = textDb.transaction('textEditor', 'readonly');
+const tx = textDb.transaction('jate', 'readonly');
 
 // Open up the desired object store.
-const store = tx.objectStore('textEditor');
+const store = tx.objectStore('jate');
 
 // Use the .getAll() method to get all data in the database.
 const request = store.getAll();

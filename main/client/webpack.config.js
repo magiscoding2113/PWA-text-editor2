@@ -20,15 +20,15 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Text Editor'
+        title: 'JATE'
       }),
       new GenerateSW(),
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'Text Editor',
-        short_name: 'text editor',
-        description: 'Text Editor!',
+        name: 'JATE',
+        short_name: 'JATE',
+        description: 'just another text editor!',
         //background_color: ' #225ca3;', //not working says unknown tried color in css also didnt work??
         //theme_color: '#225ca3',
         start_url: './',
