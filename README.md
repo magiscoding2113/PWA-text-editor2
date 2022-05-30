@@ -2,18 +2,14 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+This project was created to provide a place where people can add random notes and edit them. It helps eliminate having multiple note pads and allows all notes to be organized in one place. I learned how to use PWA and take what I have learned using webpacks and apply them to complete this assignment. Here is a link to this project in GitHub: https://github.com/magiscoding2113/PWA-text-editor2 and you can see it deployed on Heroku: https://pwa-text2113.herokuapp.com/
 
 ## Installation
 npm I IDB is required to run this project. 
+
 ## Usage
 
-NPM I IDB in your local terminal, then npm I and browser will load and show text editor.
+NPM I IDB in your local terminal, then npm I and browser will load and show text editor. You can then install to your nav bar. 
 
 
 
@@ -27,7 +23,13 @@ UCSD extension coding bootcamp activities, mini project, indexdb activity, MDN d
 
 ## License
 
+MIT
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+
 UCSD Extension coding bootcamp
+
 
 
 ## How to Contribute
